@@ -1,0 +1,2 @@
+# FCCFrontEndDevProjects
+The projects from FreeCodeCampFrontEndCurriculum
