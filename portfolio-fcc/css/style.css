@@ -1,0 +1,82 @@
+body{
+  font-family:Montserrat, Sans-serif;
+  
+}
+hr{
+  border:none;
+  border-top:2px solid #BFD6A0;
+  width:70%;
+}
+.jumbotron{
+  background:url(http://41.media.tumblr.com/9dad5056df456b6ad3d02497b26b4669/tumblr_nput5v44HX1ted1sho1_1280.jpg) center;
+  background-size:cover;
+  text-align:center;
+}
+ul.social-links{
+  margin:0 auto;
+  text-align:center;
+  padding:0;
+  margin:0;
+}
+
+.social-links li{
+  display:inline-block;
+  width:150px;
+  text-align:center;
+  padding:10px;
+
+  
+  
+}
+
+.social-links a{
+  text-decoration:none;
+  padding-bottom:0;
+ 
+  background:rgba(39, 67, 51,0.5);
+  border:none;
+  color:#fff;
+}
+.social-links a:hover {
+   background:rgba(51, 114, 51,1);
+  color:#fff;
+}
+.vert-center{
+  vertical-align:middle;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.container #about img{
+  max-width:100%;
+}
+.about .text{
+  margin:auto auto;
+  vertical-align:middle;    
+}
+.container{
+ margin-bottom:50px;  
+}
+.port-text{
+  text-decoration:none;
+  color:#333;
+}
+.navbar{
+  background:#203127;
+  border:#203127;
+
+}
+.navbar .container-fluid span.icon-bar, .navbar .container-fluid li a, .navbar .container-fluid  a{
+    color:#fff;
+}
+.navbar .container-fluid li.active a{
+  color:#203127;
+  background:#fff;
+}
+.navbar .container-fluid li.active a:hover,  .navbar .container-fluid li a:hover{
+background:rgba(51, 114, 51,1);
+  color:#fff;
+}
+.navbar .container-fluid  a:hover{
+    color:#C2DBA1;
+}

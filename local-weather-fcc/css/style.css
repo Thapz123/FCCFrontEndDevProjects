@@ -1,0 +1,30 @@
+.container{
+  height:100%;
+  margin-top:50px
+}
+h1{
+  font-size:5em;
+  text-transform:uppercase;
+}
+.hot{
+color:#fff; background:url(http://www.listofimages.com/wp-content/uploads/2012/05/sunsets-desert-nature.jpg) center no-repeat;
+  
+}
+.hot .container{
+  background:rgba(80,24,4,0.3);
+}
+
+.cold{
+color:#fff; background:url(https://upload.wikimedia.org/wikipedia/commons/9/99/Snowy_Mountains_in_January.jpg) center no-repeat;
+  
+}
+.cold .container{
+  background:rgba(75,84,88,0.3);
+}
+.normal{
+color:#fff; background:url(http://cdn01.wallconvert.com/_media/wallpapers_1680x1050/1/1/clear-sky-3356.jpg) center no-repeat;
+  
+}
+.normal .container{
+  background:rgba(0,0,0,0.3);
+}
