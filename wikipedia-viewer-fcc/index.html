@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html >
-  <head>
+<html>
+
+<head>
     <meta charset="UTF-8">
     <title>WikipediaViewer</title>
-    
-    
-    
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
-  </head>
-
-  <body>
-
-    <h2 class = "text-center">Wikipedia Search</h2>
-<form action="">
-  <input type="text" class= "form-control" placeholder="Search"/>
-  <a  id="submitBtn" class="text-center centred btn btn-danger">
+<body>
+    <h2 class="text-center">Wikipedia Search</h2>
+    <form action="">
+        <input type="text" id="text" class="form-control" placeholder="Search" />
+        <a id="submitBtn" class="text-center centred btn btn-danger">
   Search</a>
-</form>
-<button type= "submit" class="text-center centred btn btn-primary">
-  Random Article</button>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    </form>
+    <button type="submit" id="randomBtn" class="text-center centred btn btn-primary">
+        Random Article</button>
 
-        <script src="js/index.js"></script>
+    <div id="display" class= "container"></div>
+    <script src='js/jquery-2.2.3.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
 
-    
-    
-    
-  </body>
 </html>
