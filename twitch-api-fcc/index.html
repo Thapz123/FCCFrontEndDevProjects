@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>twitch-api-fcc</title>
+
+
+
+    <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 ">
+                <section class="row text-center">
+                    <h2>Twitch Streamers</h2>
+                </section>
+                <nav class="nav text-center" id="nav">
+                    <a href="#" role="button" class="btn btn-large-text" id="all">All</a>
+                    <a href="#" role="button" class="btn btn-large-text" id="online">Online</a>
+                    <a href="#" role="button" class="btn btn-large-text" id="offline">Not Online</a>
+
+                </nav>
+
+            </div>
+            <div class="col-xs-2"></div>
+
+
+        </div>
+        </div>
+        <div id="display" class="text-center">
+            <h4>Results will display here <br>Use navigation above</h4></div>
+        <script id="card_template" type="text/x-handlebars-template">
+            <div class="col-xs-6">
+                <div class="card">
+                    <div class="image-card">
+                        <img src={{src}} alt="" class="img" />
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">{{username}}</h4>
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="link">
+                        <a href={{link}} class="btn btn-link btn-block">go to stream</a>
+                    </div>
+                </div>
+            </div>
+
+        </script>
+    </body>
+    <script src='js/jquery-3.0.0.min.js'></script>
+    <script src='js/handlebars-v4.0.5.js'></script>
+
+    <script src="js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

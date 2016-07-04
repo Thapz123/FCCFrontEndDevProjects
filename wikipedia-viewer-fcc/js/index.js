@@ -25,7 +25,7 @@ function getRequest() {
                 //console.log(searchItem);
                 display.appendChild(searchItem);
 
-            })
+            });
         },
         error: function() {
             console.log("error");
