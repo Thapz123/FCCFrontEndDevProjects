@@ -1,0 +1,42 @@
+/*92caf5-99e0e8-91f7e3-7edecc-76bfb3*/
+#calc_body {
+  border-radius: .75em;
+  background-color: #92caf5;
+  min-height: 600px;
+  margin: 20px auto;
+  box-shadow: 0.4em 0.4em 0 rgba(0, 0, 0, 0.2); }
+
+#display {
+  background: #7EDECC;
+  margin: 20px;
+  min-height: 100px;
+  box-shadow: inset -2px -2px 0 #76BFB3;
+  border-radius: .25em; }
+
+#keys {
+  margin: 20px;
+  background: #999;
+  min-height: 420px;
+  border-radius: .25em; }
+
+.num, .operator {
+  min-width: 80px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 3px;
+  margin: 35px auto auto;
+  font-size: 2em;
+  color: #fff; }
+
+.num {
+  background: #FFBCD9;
+  box-shadow: .1em .1em 0 #D67AA2; }
+
+.operator {
+  box-shadow: .1em .1em 0 #888; }
+
+.operator-extend {
+  padding: 10px 82px;
+  min-width: 187px; }
+
+/*# sourceMappingURL=style.css.map */
