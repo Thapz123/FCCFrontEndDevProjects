@@ -1,2 +1,2 @@
 # FCCFrontEndDevProjects
-The projects from FreeCodeCampFrontEndCurriculum
+The projects from FreeCodeCamp FrontEnd Development Curriculum
