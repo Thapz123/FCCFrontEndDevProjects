@@ -1,6 +1,7 @@
 # FCCFrontEndDevProjects
 My solutions to the FreeCodeCamp FrontEnd Development Curriculum  
-They are all built in vanilla JavaScript with some JQuery for selection and API calls  
+They are all built in vanilla JavaScript with some JQuery for selection and API calls 
+  
 1. Calculator that can perform simple calculations.  
 2. Local Weather app that communicates with a weather API and display the weather of that day. 
 3. Pomodoro timer that helps people work more productively.  
