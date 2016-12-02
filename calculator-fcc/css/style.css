@@ -11,6 +11,8 @@
   margin: 20px;
   min-height: 100px;
   box-shadow: inset -2px -2px 0 #76BFB3;
+  font-size: 5em;
+  color: #fff;
   border-radius: .25em; }
 
 #keys {

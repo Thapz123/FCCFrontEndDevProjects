@@ -15,19 +15,10 @@ var operators = {
         return a * b ;},
     '-': function(a, b=0) { return a - b; },
     '=': function(a, b=0) { return a;},
-    'C': function(a, b=0) { clear();  return 0;}
+    
      // ...
 };
-function clear(){
-    calc.init=false;
-    calc.total=0;
-    calc.currNum=0;
-    calc.currOp="";
-    calc.currNumText="";
-    calc.prev="";
-    $("#display").innerText="";
-    
-}
+
 
 var calc = {
   init:false,
@@ -36,10 +27,22 @@ var calc = {
   currOp:"",
   // currText:"",
   currNumText:"",
-  
   prev:"",
+  clear:function(){
+    this.init=false;
+    this.total=0;
+    this.currNum=0;
+    this.currOp="";
+    this.currNumText="";
+    this.prev="";
+    display.innerText="";
+  },
+  
   doOperation:function(op){
-    if(!operators.hasOwnProperty(op)){
+    if(op=="C"){
+      this.clear();
+    }
+    else if(!operators.hasOwnProperty(op)){
 
       if(!isNaN(op)){
         // this.currText=this.currText+op;
@@ -47,6 +50,9 @@ var calc = {
         if(this.prev=="eq"){
           display.innerText="";
           // this.currText="";
+          this.total=0;
+          this.init=false;
+          this.currNum=0;
           this.currNumText="";
         }
         this.currNumText= this.currNumText+op;
@@ -56,8 +62,10 @@ var calc = {
       //console.log("num: ", this.currText);
 
 
-    }else{
+    }
+    else{
       this.currText=this.currText+op;
+
       if(!this.init){
         this.total= Number(this.currNumText);
         this.currOp=op;
@@ -80,6 +88,8 @@ var calc = {
         
         if(op=='='){
           this.prev="eq";
+        }else{
+          this.prev="op";
         }
       }
       // console.log("op: ",this.currText);
