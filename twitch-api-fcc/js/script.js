@@ -1,9 +1,9 @@
-$(document).ready(function () {
+$(document).ready(function() {
     "use strict";
     //Move stuff that alters the data to controller
     //
     var model = {
-        apiUrl: "https://api.twitch.tv/kraken/streams/",
+        apiUrl: "https://wind-bow.gomix.me/twitch-api/",
         channels: ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "conmster404"],
         baseUrl: "http://www.twitch.tv/",
         all: [],
@@ -15,13 +15,13 @@ $(document).ready(function () {
     var view = {
         //create the html
 
-        source: function () {
+        source: function() {
             return $("#card_template").html();
         },
-        template: function () {
+        template: function() {
             return Handlebars.compile(this.source());
         },
-        createCard: function (cardObj) {
+        createCard: function(cardObj) {
             var htmlTemp = this.template();
             var html = htmlTemp(cardObj);
 
@@ -30,10 +30,10 @@ $(document).ready(function () {
         display: document.getElementById("display")
     };
     var controller = {
-        CreateStreamer: function (streamer) {
+        CreateStreamer: function(streamer) {
             this.username = streamer;
         },
-        groupChannels: function (data) {
+        groupChannels: function(data) {
 
             if (data.stream) {
                 return true;
@@ -43,18 +43,18 @@ $(document).ready(function () {
 
 
         },
-        apiCall: function (url, stream) {
+        apiCall: function(url, stream) {
             var streamer = new controller.CreateStreamer(stream);
 
             //console.log("streamer:", streamer);
             $.ajax({
                 url: url,
                 dataType: "jsonp",
-                error: function (jqXHR, textStatus, errorThrown) {
+                error: function(jqXHR, textStatus, errorThrown) {
                     //display.textContent = "textStatus";
                     controller.generateIfNoUser(streamer);
                 }, //Insert failure callBack which would do the account closed thing.
-                success: function (data) {
+                success: function(data) {
                     console.log("streamer1: ", streamer);
 
                     if (data._links) {
@@ -67,7 +67,7 @@ $(document).ready(function () {
 
             });
         },
-        generateIfNoUser: function (currentStreamer) {
+        generateIfNoUser: function(currentStreamer) {
             var data = {};
             data.src = "http://dummyimage.com/300.png/09f/fff";
             data.username = currentStreamer.username;
@@ -77,7 +77,7 @@ $(document).ready(function () {
             model.all.push(data);
         },
 
-        extractData: function (rawData, currentStreamer) {
+        extractData: function(rawData, currentStreamer) {
             //console.log(currentStreamer);
             var data = {};
             if (this.groupChannels(rawData)) {
@@ -109,17 +109,17 @@ $(document).ready(function () {
 
         },
         //End of Api Call Function,
-        generateUrl: function (streamers) { //Generates unique api call url for each streamer and calls the api with it
+        generateUrl: function(streamers) { //Generates unique api call url for each streamer and calls the api with it
             console.log("");
-            streamers.forEach(function (streamer) {
-                var url = " https://api.twitch.tv/kraken/streams/" + streamer;
+            streamers.forEach(function(streamer) {
+                var url = "  https://wind-bow.gomix.me/twitch-api/" + streamer;
                 controller.currentStreamer = streamer;
                 console.log("url generated :" + url);
 
                 controller.apiCall(url, streamer);
             });
         },
-        init: function () {
+        init: function() {
             //console.log("Initialised");
             controller.generateUrl(model.channels);
         }
@@ -127,22 +127,22 @@ $(document).ready(function () {
     };
     controller.init();
     //$("#all").click(apiCall(url));
-    var nav = document.getElementById("nav").addEventListener("click", function (e) {
+    var nav = document.getElementById("nav").addEventListener("click", function(e) {
 
         if (e.target && e.target.matches("a#all")) {
             view.display.innerHTML = "";
-            model.all.forEach(function (streamer) {
+            model.all.forEach(function(streamer) {
                 view.createCard(streamer);
             });
         } else if (e.target && e.target.matches("a#online")) {
             view.display.innerHTML = "";
-            model.online.forEach(function (streamer) {
+            model.online.forEach(function(streamer) {
                 view.createCard(streamer);
             });
         } else if (e.target && e.target.matches("a#offline")) {
             //console.log("off clicked");
             view.display.innerHTML = "";
-            model.offline.forEach(function (streamer) {
+            model.offline.forEach(function(streamer) {
                 view.createCard(streamer);
             });
         }
